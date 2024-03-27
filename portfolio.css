@@ -1,0 +1,73 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden; /* To handle overflowing content */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+.logo {
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end; /* Aligns nav links to the right */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.hero {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero-content {
+    text-align: left;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
