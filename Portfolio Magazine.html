@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Phil</title>
-    <link rel="stylesheet" href="portfolio.css">
+    <title>Magazine - Phil's Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css"> <!-- Ensure your CSS path is correct -->
 </head>
 <body>
     <nav class="navbar">
@@ -14,7 +14,7 @@
                 <a href="Portfolio homepage.html">Home</a>
                 <a href="Portfolio About me.html">About</a>
                 <a href="#projects">Projects</a>
-                <a href="Portfolio Magazine.html">Magazine</a>
+                <a href="Magazine.html" class="active">Magazine</a> <!-- Highlight this page as active -->
                 <a href="Portfolio Contact.html">Contact</a>
             </div>
         </div>
@@ -22,49 +22,44 @@
 
     <header class="hero">
         <div class="container hero-content">
-            <h1>Hello and welcome to my portfolio! 😊 I'm Phil, a Junior software developer and Blockchain enthusiast.</h1>
-            <p>Welcome to my website. Feel free to check out my projects and magazine that has weekly uploads.</p>
-            <a href="Portfolio Contact.html" class="contact-button">Contact me</a>
+            <h1>Welcome to My Magazine</h1>
+            <p>Explore editions of my magazine focusing on software development, blockchain, and more!</p>
         </div>
     </header>
 
-    <section class="testimonials">
+    <section class="magazine-issues">
         <div class="container">
-            <h2>What People Say</h2>
-            <p>"Pan's Testimonial here"</p>
+            <h2>Latest Issues</h2>
+            <!-- Example issue -->
+            <div class="issue">
+                <h3>Issue 01 - Getting Started with Blockchain</h3>
+                <p>This issue covers the basics of blockchain technology and its applications.</p>
+                <button class="btn" onclick="toggleMagazine()">Read This Issue</button>
+                <div id="magazineEmbed" style="margin-top: 20px; display: none;"></div>
+            </div>
+            <!-- Additional issues can use similar setup -->
         </div>
     </section>
 
-    <section class="latest-news">
+    <footer>
         <div class="container">
-            <h2>Latest News</h2>
-            <article>
-                <h3>Magazine edition 1 has launched!</h3>
-                <p>Exciting news! I've just launched a new project that will change the way you think about blockchain, the first edition can be found here, check it out!</p>
-                <button class="btn" id="toggleButton" onclick="toggleMagazine()">Read More</button>
-                <div id="magazineEmbed" style="margin-top: 20px; display: none;"></div>
-            </article>
-            <article>
-                <h3>Blockchain Insights</h3>
-                <p>This week's blog post delves deep into the potential of blockchain technology in emerging markets.</p>
-                <a href="#" class="btn">Read More</a>
-            </article>
+            <p>&copy; 2024 by Phil Bearman. All rights reserved.</p>
         </div>
-    </section>
+    </footer>
 
     <script>
         function toggleMagazine() {
             var embedContainer = document.getElementById('magazineEmbed');
-            var button = document.getElementById('toggleButton');
+            var button = document.querySelector('.btn');
             if (embedContainer.style.display === 'none' || embedContainer.style.display === '') {
                 embedContainer.style.display = 'block';
                 button.textContent = 'Read Less';
-                if (!embedContainer.innerHTML.trim()) { // Load the iframe only if it has not been loaded yet
+                if (!embedContainer.innerHTML.trim()) {
                     embedContainer.innerHTML = `<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Ffin0cmagMYbZ6tJG1hrZNM%2FGetting-BIZI-with-Blockchain%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D3-531%26viewport%3D2132%252C557%252C0.24%26t%3DyZ1RR6R0jgpOivnU-1%26scaling%3Dmin-zoom%26mode%3Ddesign" allowfullscreen></iframe>`;
                 }
             } else {
                 embedContainer.style.display = 'none';
-                button.textContent = 'Read More';
+                button.textContent = 'Read This Issue';
             }
         }
     </script>

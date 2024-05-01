@@ -1,29 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Phil</title>
     <link rel="stylesheet" href="portfolio.css" />
-  </head>
-  <body>
+</head>
+<body>
     <nav class="navbar">
-      <div class="container">
-        <a href="#" class="logo">Phil Bearman</a>
-        <div class="nav-links">
-          <a href="Portfolio homepage.html">Home</a>
-          <a href="Portfolio About me.html">About</a>
-          <a href="#projects">Projects</a>
-          <a href="magazine">Magazine</a>
-          <a href="Portfolio Contact.html">Contact</a>
+        <div class="container">
+            <a href="#" class="logo">Phil Bearman</a>
+            <div class="nav-links">
+                <a href="Portfolio homepage.html">Home</a>
+                <a href="Portfolio About me.html">About</a>
+                <a href="#projects">Projects</a>
+                <a href="Portfolio Magazine.html">Magazine</a>
+                <a href="Portfolio Contact.html">Contact</a>
+            </div>
         </div>
-      </div>
     </nav>
 
     <header class="hero">
-      <div class="container hero-content">
-        <h1>Contact me</h1>
-      </div>
+        <div class="container hero-content">
+            <h1>Contact Me</h1>
+        </div>
     </header>
-  </body>
+
+    <section class="contact-info container">
+        <h2>Get in Touch</h2>
+        <p>You can reach me through the following means:</p>
+        <ul>
+            <li><strong>Email:</strong> phillb.work@gmail.com</li>
+            <li><strong>LinkedIN:</strong> https://www.linkedin.com/in/philbearman/</li>
+        </ul>
+    </section>
+
+    <section class="contact-form container">
+        <h2>Send me a Message!</h2>
+        <form action="submit_contact_form.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="container">
+        <p>Thank you for visiting my website!</p>
+    </footer>
+</body>
 </html>
