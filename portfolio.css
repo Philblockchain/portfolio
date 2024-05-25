@@ -145,17 +145,48 @@ footer {
     margin: 20px 0;
     width: 90%;
     max-width: 600px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    margin-top: auto;
-}
-
-footer .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+}
+
+/* Center input and button */
+#answerInput, #submitButton, #startButton, #nextQuestion, #tryAgainButton {
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Feedback message */
+.feedback {
+    margin: 20px 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links a {
+        margin: 5px 0;
+    }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 30px 0;
+    }
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    .quiz-container {
+        padding: 15px;
+    }
 }

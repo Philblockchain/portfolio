@@ -69,6 +69,7 @@ function startQuiz() {
     document.getElementById('tryAgainButton').style.display = 'none';
     document.getElementById('nextQuestion').style.display = 'none';
     document.getElementById('feedback').textContent = ''; // Clear previous feedback
+    document.getElementById('answerInput').focus(); // Focus the input field
 }
 
 function getRandomQuestions(num) {
@@ -102,6 +103,7 @@ function nextQuestion() {
         document.getElementById('submitButton').style.display = 'block';
         document.getElementById('answerInput').style.display = 'block';
         document.getElementById('nextQuestion').style.display = 'none';
+        document.getElementById('answerInput').focus(); // Focus the input field
     } else {
         document.getElementById('questionBox').style.display = 'none';
         document.getElementById('feedback').style.display = 'none';
