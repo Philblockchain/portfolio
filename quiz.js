@@ -1,7 +1,7 @@
 const questions = [
-    { question: "What is 'dog' in Slovak?", answer: "pes" },
-    { question: "What is 'cat' in Slovak?", answer: "mačka" },
-    { question: "What is 'house' in Slovak?", answer: "dom" }
+    { question: "Čo je 'dog' v slovenčine?", answer: "dog" },
+    { question: "Čo je 'cat' v slovenčine?", answer: "cat" },
+    { question: "Čo je 'house' v slovenčine?", answer: "house" }
 ];
 
 let currentQuestionIndex = 0;
