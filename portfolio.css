@@ -148,12 +148,24 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center content horizontally */
+    position: relative; /* Ensure buttons are positioned relative to this container */
 }
 
 /* Center input and button */
 #answerInput, #submitButton, #startButton, #nextQuestion, #tryAgainButton {
     margin: 10px 0;
     text-align: center;
+}
+
+#submitButton, #nextQuestion {
+    position: absolute;
+    bottom: 20px;
+}
+
+#answerInput {
+    text-align: left; /* Align text from left to right */
+    width: 80%; /* Ensure the input box has enough width */
+    max-width: 300px; /* Limit the max width for better appearance */
 }
 
 /* Feedback message */
@@ -188,5 +200,9 @@ footer {
     }
     .quiz-container {
         padding: 15px;
+    }
+    #answerInput {
+        width: 100%;
+        max-width: none;
     }
 }
