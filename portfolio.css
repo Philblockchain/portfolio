@@ -1,22 +1,20 @@
+/* Existing CSS */
 html {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
     overflow-y: scroll;
 }
-
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%); /* Gradient from white to light grey */
+    background: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%);
 }
-
 .container {
     width: 80%;
     margin: auto;
     padding: 20px 0;
 }
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -24,7 +22,6 @@ body {
     background-color: #333;
     padding: 10px 0;
 }
-
 .logo {
     margin-left: 15px;
     font-weight: bold;
@@ -32,12 +29,10 @@ body {
     text-decoration: none;
     color: #fff;
 }
-
 .nav-links {
     display: flex;
     justify-content: flex-end;
 }
-
 .nav-links a {
     text-decoration: none;
     color: #fff;
@@ -46,99 +41,49 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
 }
-
 .nav-links a:hover {
     background-color: #007bff;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.hero {
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 50px 0;
-    text-align: center;
+/* Additional CSS for Project Boxes */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0;
 }
-
-.hero-content h1 {
-    margin: 0;
-    font-size: 48px;
-}
-
-.hero-content p {
-    font-size: 20px;
-}
-
-.contact-info, .testimonials, .latest-news {
+.project-box {
     background: #fff;
+    border: 2px solid #dee2e6;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 20px;
-    margin-top: 20px;
 }
-
-.contact-info h2, .testimonials h2, .latest-news h2 {
-    color: #333;
-    font-size: 24px;
-}
-
-.contact-info p, .contact-info ul, .testimonials p, .latest-news article {
-    margin-left: 20px;
-}
-
-.contact-info ul, .latest-news article {
-    list-style: none;
-}
-
-.contact-info li, .latest-news article h3 {
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.latest-news article p {
-    font-size: 14px;
-}
-
-.btn, .contact-button {
-    display: inline-block;
-    background-color: #333; /* Dark grey */
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.btn:hover, .contact-button:hover {
-    background-color: #007bff; /* Black on hover */
-    box-shadow: 0 0 8px rgba(0,0,0,0.5);
-}
-
-.contact-form label {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
+.project-box img {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 5px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    border-bottom: 1px solid #ccc;
 }
-
-.contact-form button {
-    background-color: #007bff;
+.project-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.project-info {
+    background: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    padding: 10px;
+    position: relative;
+    bottom: 70px;
+    margin: 0;
 }
-
-.contact-form button:hover {
-    background-color: #0056b3;
+h3.project-title {
+    margin-top: 0;
+    font-size: 20px;
 }
