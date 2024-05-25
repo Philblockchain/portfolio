@@ -64,6 +64,8 @@ function startQuiz() {
     document.getElementById('answerInput').style.display = 'block';
     document.getElementById('submitButton').style.display = 'block';
     document.getElementById('question').textContent = selectedQuestions[currentQuestionIndex].question;
+    document.getElementById('finalMessage').style.display = 'none';
+    document.getElementById('tryAgainButton').style.display = 'none';
 }
 
 function getRandomQuestions(num) {
@@ -102,5 +104,16 @@ function nextQuestion() {
         document.getElementById('feedback').style.display = 'none';
         document.getElementById('finalScore').style.display = 'block';
         document.getElementById('finalScore').textContent = `Quiz Over! Your final score is ${score} out of ${selectedQuestions.length}.`;
+        document.getElementById('finalMessage').style.display = 'block';
+        document.getElementById('tryAgainButton').style.display = 'block';
     }
+}
+
+function tryAgain() {
+    document.getElementById('questionBox').style.display = 'block';
+    document.getElementById('feedback').style.display = 'block';
+    document.getElementById('finalScore').style.display = 'none';
+    document.getElementById('finalMessage').style.display = 'none';
+    document.getElementById('tryAgainButton').style.display = 'none';
+    startQuiz();
 }
