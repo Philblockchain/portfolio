@@ -150,7 +150,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center content horizontally */
-    position: relative; /* Ensure buttons are positioned relative to this container */
+    gap: 20px; /* Add gap between elements */
 }
 
 /* Center input and button */
@@ -162,16 +162,13 @@ footer {
 }
 
 #buttonContainer {
-    width: 100%;
     display: flex;
     justify-content: center;
-    position: relative; /* Ensure the buttons are positioned relative to this container */
+    gap: 20px; /* Ensure spacing between buttons */
 }
 
 #submitButton, #nextQuestion {
     width: 150px;
-    position: absolute;
-    bottom: 0;
 }
 
 /* Feedback message */
