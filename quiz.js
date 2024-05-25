@@ -66,6 +66,7 @@ function startQuiz() {
     document.getElementById('question').textContent = selectedQuestions[currentQuestionIndex].question;
     document.getElementById('finalMessage').style.display = 'none';
     document.getElementById('tryAgainButton').style.display = 'none';
+    document.getElementById('nextQuestion').style.display = 'none';
 }
 
 function getRandomQuestions(num) {
