@@ -1,4 +1,4 @@
-/* Existing CSS */
+/* Base HTML styles */
 html {
     margin: 0;
     padding: 0;
@@ -10,11 +10,15 @@ body {
     padding: 0;
     background: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%);
 }
+
+/* Container setup */
 .container {
     width: 80%;
     margin: auto;
     padding: 20px 0;
 }
+
+/* Navigation bar styling */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -47,7 +51,25 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Additional CSS for Project Boxes */
+/* Button styles */
+.btn {
+    padding: 10px 20px;
+    background-color: #444; /* Dark grey background */
+    color: white; /* White text */
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+.btn:hover {
+    background-color: #007bff; /* Blue background on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Project grid styling */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
