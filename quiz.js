@@ -68,6 +68,7 @@ function startQuiz() {
     document.getElementById('finalMessage').style.display = 'none';
     document.getElementById('tryAgainButton').style.display = 'none';
     document.getElementById('nextQuestion').style.display = 'none';
+    document.getElementById('feedback').textContent = ''; // Clear previous feedback
 }
 
 function getRandomQuestions(num) {
@@ -97,7 +98,7 @@ function nextQuestion() {
     if (currentQuestionIndex < selectedQuestions.length) {
         document.getElementById('question').textContent = selectedQuestions[currentQuestionIndex].question;
         document.getElementById('answerInput').value = ''; // Clear the input field
-        document.getElementById('feedback').textContent = '';
+        document.getElementById('feedback').textContent = ''; // Clear previous feedback
         document.getElementById('submitButton').style.display = 'block';
         document.getElementById('answerInput').style.display = 'block';
         document.getElementById('nextQuestion').style.display = 'none';
