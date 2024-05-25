@@ -109,6 +109,7 @@ function nextQuestion() {
         document.getElementById('finalScore').textContent = `Quiz Over! Your final score is ${score} out of ${selectedQuestions.length}.`;
         document.getElementById('finalMessage').style.display = 'block';
         document.getElementById('tryAgainButton').style.display = 'block';
+        document.getElementById('nextQuestion').style.display = 'none'; // Hide next question button
     }
 }
 
@@ -118,5 +119,6 @@ function tryAgain() {
     document.getElementById('finalScore').style.display = 'none';
     document.getElementById('finalMessage').style.display = 'none';
     document.getElementById('tryAgainButton').style.display = 'none';
+    document.getElementById('nextQuestion').style.display = 'none'; // Hide next question button
     startQuiz();
 }
