@@ -9,6 +9,11 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 /* Container setup */
@@ -25,6 +30,7 @@ body {
     align-items: center;
     background-color: #333;
     padding: 10px 0;
+    width: 100%;
 }
 .logo {
     margin-left: 15px;
@@ -108,4 +114,48 @@ body {
 h3.project-title {
     margin-top: 0;
     font-size: 20px;
+}
+
+/* Centering content */
+.header,
+.hero,
+.quiz-container,
+footer {
+    width: 100%;
+    text-align: center;
+}
+
+.hero {
+    background-color: #4CAF50;
+    color: white;
+    padding: 50px 0;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quiz-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px 0;
+    width: 90%;
+    max-width: 600px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
