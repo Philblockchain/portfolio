@@ -61,6 +61,7 @@ function startQuiz() {
     score = 0;
 
     document.getElementById('startButton').style.display = 'none';
+    document.getElementById('answerInput').value = ''; // Clear the input field
     document.getElementById('answerInput').style.display = 'block';
     document.getElementById('submitButton').style.display = 'block';
     document.getElementById('question').textContent = selectedQuestions[currentQuestionIndex].question;
@@ -95,7 +96,7 @@ function nextQuestion() {
 
     if (currentQuestionIndex < selectedQuestions.length) {
         document.getElementById('question').textContent = selectedQuestions[currentQuestionIndex].question;
-        document.getElementById('answerInput').value = '';
+        document.getElementById('answerInput').value = ''; // Clear the input field
         document.getElementById('feedback').textContent = '';
         document.getElementById('submitButton').style.display = 'block';
         document.getElementById('answerInput').style.display = 'block';
