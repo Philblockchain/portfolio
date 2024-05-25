@@ -30,17 +30,17 @@
     <div class="quiz-container">
         <div id="questionBox" class="question-box">
             <h2 id="question">Please press 'Start' to begin!</h2>
-            <div class="input-container">
-                <span id="questionText">Question: </span>
-                <input type="text" id="answerInput" placeholder="Type your answer here..." style="display:none;">
+            <div class="input-container" style="display:none;">
+                <span id="questionText"></span>
+                <input type="text" id="answerInput" placeholder="Type your answer here...">
             </div>
             <div id="buttonContainer">
                 <button id="submitButton" class="btn" onclick="submitAnswer()" style="display:none;">Submit</button>
                 <button onclick="startQuiz()" id="startButton" class="btn">Start Quiz</button>
+                <button id="nextQuestion" class="btn" style="display:none;" onclick="nextQuestion()">Next Question</button>
             </div>
         </div>
         <div id="feedback" class="feedback"></div>
-        <button id="nextQuestion" class="btn" style="display:none;" onclick="nextQuestion()">Next Question</button>
         <div id="finalScore" class="final-score" style="display:none;"></div>
         <div id="finalMessage" class="final-message" style="display:none;">
             <p>Would you like to try another quiz?</p>
