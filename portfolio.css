@@ -162,16 +162,16 @@ footer {
 }
 
 #buttonContainer {
-    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
+    position: relative; /* Ensure the buttons are positioned relative to this container */
 }
 
 #submitButton, #nextQuestion {
+    width: 150px;
     position: absolute;
     bottom: 0;
-    width: 150px;
 }
 
 /* Feedback message */
