@@ -51,25 +51,35 @@ const questions = [
     { question: "What does 'Telo' mean?", answer: "body" }
 ];
 
+let selectedQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 
 function startQuiz() {
+    selectedQuestions = getRandomQuestions(20);
+    currentQuestionIndex = 0;
+    score = 0;
+
     document.getElementById('startButton').style.display = 'none';
     document.getElementById('answerInput').style.display = 'block';
     document.getElementById('submitButton').style.display = 'block';
-    document.getElementById('question').textContent = questions[currentQuestionIndex].question;
+    document.getElementById('question').textContent = selectedQuestions[currentQuestionIndex].question;
+}
+
+function getRandomQuestions(num) {
+    const shuffled = questions.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, num);
 }
 
 function submitAnswer() {
     const userAnswer = document.getElementById('answerInput').value.trim().toLowerCase();
-    const correctAnswer = questions[currentQuestionIndex].answer.toLowerCase();
+    const correctAnswer = selectedQuestions[currentQuestionIndex].answer.toLowerCase();
 
     if (userAnswer === correctAnswer) {
         score++;
         document.getElementById('feedback').textContent = 'Correct!';
     } else {
-        document.getElementById('feedback').textContent = `Incorrect! This means ${questions[currentQuestionIndex].answer}.`;
+        document.getElementById('feedback').textContent = `Incorrect! This means ${selectedQuestions[currentQuestionIndex].answer}.`;
     }
 
     document.getElementById('nextQuestion').style.display = 'block';
@@ -80,8 +90,8 @@ function submitAnswer() {
 function nextQuestion() {
     currentQuestionIndex++;
 
-    if (currentQuestionIndex < questions.length) {
-        document.getElementById('question').textContent = questions[currentQuestionIndex].question;
+    if (currentQuestionIndex < selectedQuestions.length) {
+        document.getElementById('question').textContent = selectedQuestions[currentQuestionIndex].question;
         document.getElementById('answerInput').value = '';
         document.getElementById('feedback').textContent = '';
         document.getElementById('submitButton').style.display = 'block';
@@ -91,6 +101,6 @@ function nextQuestion() {
         document.getElementById('questionBox').style.display = 'none';
         document.getElementById('feedback').style.display = 'none';
         document.getElementById('finalScore').style.display = 'block';
-        document.getElementById('finalScore').textContent = `Quiz Over! Your final score is ${score} out of ${questions.length}.`;
+        document.getElementById('finalScore').textContent = `Quiz Over! Your final score is ${score} out of ${selectedQuestions.length}.`;
     }
 }
