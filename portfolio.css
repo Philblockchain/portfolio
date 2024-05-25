@@ -158,18 +158,19 @@ footer {
     text-align: left; /* Align text from left to right */
     width: 80%; /* Ensure the input box has enough width */
     max-width: 300px; /* Limit the max width for better appearance */
-    margin-top: 20px; /* Add space above the input box */
+    margin-bottom: 20px; /* Add space above the input box */
 }
 
 #buttonContainer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 20px; /* Ensure spacing between buttons */
-    margin-top: 20px; /* Add space below the buttons */
 }
 
 #submitButton, #nextQuestion {
     width: 150px;
+    margin-top: 20px;
 }
 
 /* Feedback message */
