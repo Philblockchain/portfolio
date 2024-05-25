@@ -154,18 +154,18 @@ footer {
 /* Center input and button */
 #answerInput, #submitButton, #startButton, #nextQuestion, #tryAgainButton {
     margin: 10px 0;
-    text-align: center;
-}
-
-#submitButton, #nextQuestion {
-    position: absolute;
-    bottom: 20px;
 }
 
 #answerInput {
     text-align: left; /* Align text from left to right */
     width: 80%; /* Ensure the input box has enough width */
     max-width: 300px; /* Limit the max width for better appearance */
+}
+
+#buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 /* Feedback message */
