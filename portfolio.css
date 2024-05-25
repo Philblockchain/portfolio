@@ -165,7 +165,7 @@ footer {
     display: flex;
     justify-content: center;
     gap: 20px; /* Ensure spacing between buttons */
-    margin-top: 20px; /* Add space below the buttons */
+    margin-bottom: 20px; /* Add space below the buttons */
 }
 
 #submitButton, #nextQuestion {
