@@ -66,7 +66,7 @@ function nextQuestion() {
     if (currentQuestionIndex < questions.length) {
         document.getElementById('feedback').innerHTML = '';
         document.getElementById('nextQuestion').style.display = 'none';
-        document.getElementById('questionText').innerText = questions[currentQuestionIndex].question;
+        document.getElementById('questionText').innerText = `What does ${questions[currentQuestionIndex].question} mean?`;
         document.getElementById('answerInput').style.display = 'inline-block';
         document.getElementById('answerInput').value = '';
         document.getElementById('answerInput').focus();
