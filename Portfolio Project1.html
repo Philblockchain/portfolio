@@ -30,7 +30,10 @@
     <div class="quiz-container">
         <div id="questionBox" class="question-box">
             <h2 id="question">Please press 'Start' to begin!</h2>
-            <input type="text" id="answerInput" placeholder="Type your answer here..." style="display:none;">
+            <div class="input-container">
+                <span id="questionText">Question: </span>
+                <input type="text" id="answerInput" placeholder="Type your answer here..." style="display:none;">
+            </div>
             <div id="buttonContainer">
                 <button id="submitButton" class="btn" onclick="submitAnswer()" style="display:none;">Submit</button>
                 <button onclick="startQuiz()" id="startButton" class="btn">Start Quiz</button>

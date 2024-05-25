@@ -154,11 +154,17 @@ footer {
 }
 
 /* Center input and button */
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Add space below the input container */
+}
+
 #answerInput {
     text-align: left; /* Align text from left to right */
     width: 80%; /* Ensure the input box has enough width */
     max-width: 300px; /* Limit the max width for better appearance */
-    margin-bottom: 20px; /* Add space above the input box */
+    margin-left: 10px; /* Add space between the text and input box */
 }
 
 #buttonContainer {
