@@ -42,7 +42,8 @@ body {
 .nav-links {
     display: flex;
     justify-content: flex-end;
-    flex-wrap: wrap; /* Ensure the nav items stay in a row */
+    flex-wrap: nowrap; /* Ensure the nav items stay in a row */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
 }
 .nav-links a {
     text-decoration: none;
@@ -193,7 +194,12 @@ footer {
         width: 90%;
     }
     .nav-links {
-        justify-content: space-between;
+        justify-content: flex-start;
+        overflow-x: auto; /* Ensure the nav bar stays in one line and scrollable */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+    }
+    .nav-links a {
+        white-space: nowrap; /* Prevent text from wrapping */
     }
     .project-grid {
         grid-template-columns: 1fr;
