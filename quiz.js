@@ -51,10 +51,14 @@ const questions = [
     { question: "Telo", answer: "Body" }
 ];
 
+let selectedQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 
 function startQuiz() {
+    selectedQuestions = getRandomQuestions(questions, 20);
+    currentQuestionIndex = 0;
+    score = 0;
     document.getElementById('question').style.display = 'none';
     document.querySelector('.input-container').style.display = 'flex';
     document.getElementById('submitButton').style.display = 'inline-block';
@@ -62,13 +66,18 @@ function startQuiz() {
     nextQuestion();
 }
 
+function getRandomQuestions(array, num) {
+    const shuffled = array.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, num);
+}
+
 function nextQuestion() {
-    if (currentQuestionIndex < questions.length) {
+    if (currentQuestionIndex < selectedQuestions.length) {
         document.getElementById('feedback').innerHTML = '';
         document.getElementById('nextQuestion').style.display = 'none';
         document.getElementById('submitButton').style.display = 'inline-block';
         document.getElementById('answerInput').style.display = 'inline-block';
-        document.getElementById('questionText').innerText = `What does ${questions[currentQuestionIndex].question} mean?`;
+        document.getElementById('questionText').innerText = `What does ${selectedQuestions[currentQuestionIndex].question} mean?`;
         document.getElementById('answerInput').value = '';
         document.getElementById('answerInput').focus();
     } else {
@@ -78,13 +87,13 @@ function nextQuestion() {
 
 function submitAnswer() {
     const userAnswer = document.getElementById('answerInput').value.trim().toLowerCase();
-    const correctAnswer = questions[currentQuestionIndex].answer.toLowerCase();
+    const correctAnswer = selectedQuestions[currentQuestionIndex].answer.toLowerCase();
 
     if (userAnswer === correctAnswer) {
         score++;
         document.getElementById('feedback').innerText = 'Correct!';
     } else {
-        document.getElementById('feedback').innerText = `Incorrect! This means ${questions[currentQuestionIndex].answer}.`;
+        document.getElementById('feedback').innerText = `Incorrect! This means ${selectedQuestions[currentQuestionIndex].answer}.`;
     }
 
     currentQuestionIndex++;
@@ -98,13 +107,11 @@ function endQuiz() {
     document.getElementById('submitButton').style.display = 'none';
     document.getElementById('nextQuestion').style.display = 'none';
     document.getElementById('finalScore').style.display = 'block';
-    document.getElementById('finalScore').innerText = `You scored ${score} out of ${questions.length}!`;
+    document.getElementById('finalScore').innerText = `You scored ${score} out of ${selectedQuestions.length}!`;
     document.getElementById('finalMessage').style.display = 'block';
 }
 
 function tryAgain() {
-    currentQuestionIndex = 0;
-    score = 0;
     document.getElementById('finalScore').style.display = 'none';
     document.getElementById('finalMessage').style.display = 'none';
     startQuiz();
