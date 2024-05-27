@@ -200,6 +200,8 @@ footer {
     }
     .nav-links a {
         white-space: nowrap; /* Prevent text from wrapping */
+        padding: 8px 10px; /* Smaller padding for mobile */
+        font-size: 14px; /* Smaller font size for mobile */
     }
     .project-grid {
         grid-template-columns: 1fr;
